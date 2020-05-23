@@ -1,6 +1,6 @@
 package sorting
 
-object QuickSort extends App{
+object QuickSort extends App {
   println(quicksort(List(6, 9, 23, 1, 2, 3)))
 
   def quicksort(xs: List[Int]): List[Int] = {
@@ -12,6 +12,4 @@ object QuickSort extends App{
       }
     }
   }
-
-
 }
