@@ -14,7 +14,7 @@ object BinarySearch extends App {
     else if (xs(mid) > target)
       return binarySearchNormal(xs, target)(start, mid - 1)
     else (xs(mid) < target)
-    return binarySearchNormal(xs, target)(mid + 1, end)
+    binarySearchNormal(xs, target)(mid + 1, end)
 
   }
 
