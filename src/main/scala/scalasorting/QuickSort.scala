@@ -1,4 +1,4 @@
-package sorting
+package scalasorting
 
 object QuickSort extends App {
   println(quicksort(List(6, 9, 23, 1, 2, 3)))

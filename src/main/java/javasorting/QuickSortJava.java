@@ -1,6 +1,6 @@
-package sorting;
+package javasorting;
 
-class QuickSortJava {
+public class QuickSortJava {
 
     int partition(int arr[], int low, int high) {
         int pivot = arr[high];

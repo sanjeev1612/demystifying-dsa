@@ -1,4 +1,4 @@
-package caching;
+package javacaching;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
