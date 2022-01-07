@@ -27,5 +27,4 @@ public class ListOfTopics {
     * Segment Tree
     * Disjoint Sets
     * */
-
 }

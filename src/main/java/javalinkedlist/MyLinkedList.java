@@ -123,18 +123,4 @@ public class MyLinkedList {
     System.out.println(String.format("Node %d not Found in the list ", data));
     return false;
   }
-
-  public boolean addAfterNode(int data) {
-    if (head == null) {
-      throw new UnsupportedOperationException("List is empty ");
-    } else {
-      Node current = head;
-      Node prev = null;
-      Node next;
-      int position = 1;
-
-
-      return true;
-    }
-  }
 }

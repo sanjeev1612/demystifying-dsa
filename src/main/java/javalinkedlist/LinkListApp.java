@@ -66,7 +66,6 @@ public class LinkListApp {
 
     ll.findNodePresentInLinkedList(500);
     ll.findNodePresentInLinkedList(40);
-    ll.addAfterNode(40);
     ll.printList(ll.head);
 
   }
