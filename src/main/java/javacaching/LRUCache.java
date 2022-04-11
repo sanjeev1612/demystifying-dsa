@@ -28,7 +28,11 @@ public class LRUCache<K, V> extends LinkedHashMap<K,V> {
         lru.put("arya",3);
         lru.put("jack",4);
         lru.get("arya");
-        lru.put("sanjeev",1);
+        lru.put("sanjeev",9);
+        lru.get("arya");
+        lru.put("rupam",13);
+        lru.get("arya");
+
 
         System.out.println("least recently used case is "+lru);
     }

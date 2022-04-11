@@ -10,13 +10,13 @@ public class BfsOrLevelOrder {
 
     while (!queue.isEmpty()) {
       node = queue.remove();
-      System.out.print(node.data + " ");
+      System.out.print(node.key + " ");
 
-      if (node.left != null)
-        queue.add(node.left);
+      if (node.leftChild != null)
+        queue.add(node.leftChild);
 
-      if (node.right != null)
-        queue.add(node.right);
+      if (node.rightChild != null)
+        queue.add(node.rightChild);
 
     }
   }

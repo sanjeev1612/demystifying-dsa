@@ -1,4 +1,4 @@
-package leetcode;
+package revise.leetcode;
 
 import java.util.Comparator;
 import java.util.HashMap;
