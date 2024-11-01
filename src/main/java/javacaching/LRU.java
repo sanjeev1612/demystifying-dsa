@@ -11,6 +11,7 @@ public class LRU {
         this.capacity = capacity;
         set = new LinkedHashSet<>(capacity);
         cache = new LinkedList<>();
+
     }
 
     public void look(int key) {
