@@ -75,11 +75,11 @@ class BinarySearchTree {
 
   /*
 
-  8
-  / \
-  4 14
-  / \ / \
-  1 7 9
+      8
+   /   \
+  4    12
+ / \   / \
+ 1 7   9 14
 
   */
   Node deleteNode(Node root, int key) {
