@@ -18,11 +18,6 @@ public class GraphTraversals {
     adjListArray[source].add(destination);
   }
 
-  void DFS(int v) {
-    boolean visited[] = new boolean[vertexCount];
-    DFSUtil(v, visited);
-  }
-
   void DFSUtil(int v, boolean[] visited) {
     visited[v] = true;
     System.out.print(v + " ");
@@ -32,6 +27,11 @@ public class GraphTraversals {
       if (!visited[n])
         DFSUtil(n, visited);
     }
+  }
+
+  void DFS(int v) {
+    boolean visited[] = new boolean[vertexCount];
+    DFSUtil(v, visited);
   }
 
   void BFS(int source) {
@@ -62,6 +62,7 @@ public class GraphTraversals {
     graph.addEdge(2, 3);
     System.out.println("Breadth First Traversal ");
     graph.BFS(0);
+    System.out.println();
     System.out.println("Depth First Traversal ");
     graph.DFS(0);
   }

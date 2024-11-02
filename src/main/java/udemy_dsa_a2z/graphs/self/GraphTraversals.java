@@ -9,8 +9,8 @@ public class GraphTraversals {
 
   public GraphTraversals(int v) {
     this.vertexCount = v;
-    adjacencyListArray = new LinkedList[vertexCount];
-    for (int i = 0; i < v; i++) {
+    adjacencyListArray = new LinkedList[v];
+    for (int i = 0; i < v; ++i) {
       adjacencyListArray[i] = new LinkedList<>();
     }
   }
@@ -20,19 +20,20 @@ public class GraphTraversals {
   }
 
   public void BFS(int source) {
-    boolean[] visited = new boolean[vertexCount];
-    LinkedList<Integer> queue = new LinkedList<>();
+    boolean visited[] = new boolean[vertexCount];
+    LinkedList<Integer> queue = new LinkedList<Integer>();
     visited[source] = true;
     queue.add(source);
     while (queue.size() != 0) {
       source = queue.poll();
-      System.out.println(" " + source + " ");
+      System.out.print(" " + source + " ");
       Iterator<Integer> itr = adjacencyListArray[source].listIterator();
       while (itr.hasNext()) {
         int i = itr.next();
-        if (!visited[i])
+        if (!visited[i]) {
           visited[i] = true;
-        queue.add(i);
+          queue.add(i);
+        }
       }
     }
   }
@@ -44,7 +45,7 @@ public class GraphTraversals {
 
   private void DFSUtil(int v, boolean[] visited) {
     visited[v] = true;
-    System.out.println(" " + v);
+    System.out.print(" " + v);
     Iterator<Integer> itr = adjacencyListArray[v].listIterator();
     while (itr.hasNext()) {
       int i = itr.next();
@@ -52,5 +53,19 @@ public class GraphTraversals {
         DFSUtil(i, visited);
       }
     }
+  }
+
+  public static void main(String[] args) {
+    GraphTraversals graph = new GraphTraversals(4);
+    graph.addEdge(0, 1);
+    graph.addEdge(0, 2);
+    graph.addEdge(1, 2);
+    graph.addEdge(2, 0);
+    graph.addEdge(2, 3);
+    System.out.println("Breadth First Traversal ");
+    graph.BFS(0);
+    System.out.println();
+    System.out.println("Depth First Traversal ");
+    graph.DFS(0);
   }
 }
